@@ -32,6 +32,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
+  BookingPanel,
 } from '../../components';
 import { TopbarContainer, NotFoundPage } from '../../containers';
 
@@ -45,7 +46,6 @@ import SectionReviews from './SectionReviews';
 import SectionHost from './SectionHost';
 import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
-import SectionBooking from './SectionBooking';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -480,7 +480,7 @@ export class ListingPageComponent extends Component {
                     onManageDisableScrolling={onManageDisableScrolling}
                   />
                 </div>
-                <SectionBooking
+                <BookingPanel
                   listing={currentListing}
                   isOwnListing={isOwnListing}
                   isClosed={isClosed}

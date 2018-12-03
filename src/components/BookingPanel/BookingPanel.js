@@ -3,12 +3,12 @@ import { FormattedMessage } from 'react-intl';
 import { ModalInMobile, Button } from '../../components';
 import { BookingDatesForm } from '../../forms';
 
-import css from './ListingPage.css';
+import css from './BookingPanel.css';
 
 // This defines when ModalInMobile shows content as Modal
 const MODAL_BREAKPOINT = 1023;
 
-const SectionBooking = props => {
+const BookingPanel = props => {
   const {
     listing,
     isOwnListing,
@@ -43,6 +43,8 @@ const SectionBooking = props => {
         <div className={css.modalHeading}>
           <h1 className={css.title}>{richTitle}</h1>
           <div className={css.author}>
+            { // TOOD: check is class is required
+            }
             <span className={css.authorName}>
               <FormattedMessage id="ListingPage.hostedBy" values={{ name: authorDisplayName }} />
             </span>
@@ -100,4 +102,4 @@ const SectionBooking = props => {
   );
 };
 
-export default SectionBooking;
+export default BookingPanel;
